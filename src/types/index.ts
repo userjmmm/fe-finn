@@ -211,3 +211,11 @@ export type UserInfoResponse = {
   nickname: string;
   imageUrl?: string;
 };
+
+export type NicknameRequest = {
+  nickname: string;
+};
+
+export type NicknameValidationResponse = {
+  isValid: boolean;
+};
