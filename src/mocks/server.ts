@@ -4,12 +4,14 @@ import { detailHandlers } from './detailHandlers';
 import newsHandlers from './newsHandler';
 import { searchHandlers } from './searchHandler';
 import { articleDetailHandlers } from './articleDetailHandler';
+import { myPageHandlers } from './mypageHandler';
 
 const server = setupServer(
   ...mainHandlers,
   ...detailHandlers,
   ...newsHandlers,
   ...searchHandlers,
-  ...articleDetailHandlers
+  ...articleDetailHandlers,
+  ...myPageHandlers
 );
 export default server;
