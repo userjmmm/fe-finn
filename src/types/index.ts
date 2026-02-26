@@ -206,3 +206,8 @@ export type ApiEmptyResponse = {
   code: string;
   content: Record<string, never>;
 };
+
+export type UserInfoResponse = {
+  nickname: string;
+  imageUrl?: string;
+};
