@@ -217,5 +217,5 @@ export type NicknameRequest = {
 };
 
 export type NicknameValidationResponse = {
-  isValid: boolean;
+  isEnable: boolean;
 };

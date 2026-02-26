@@ -1,16 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchInstance } from '../instance';
 
-import { NicknameValidationResponse } from '@/types';
+import { ApiResponse, NicknameValidationResponse } from '@/types';
 
 export const getNicknameValidationPath = (nickname: string) =>
   `/api/v1/my/nickname/validation?nickname=${nickname}`;
 
 export const getNicknameValidation = async (nickname: string) => {
-  const response = await fetchInstance.get<NicknameValidationResponse>(
-    getNicknameValidationPath(nickname),
-    { withCredentials: true }
-  );
+  const response = await fetchInstance.get<
+    ApiResponse<NicknameValidationResponse>
+  >(getNicknameValidationPath(nickname), { withCredentials: true });
   return response.data;
 };
 
